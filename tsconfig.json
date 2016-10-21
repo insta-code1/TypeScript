@@ -3,7 +3,28 @@
         "module": "commonjs",
         "target": "es5",
         "noImplicitAny": false,
-        "sourceMap": false,
-        "strictNullChecks": true
+        "sourceMap": false,       // if true this addes the typescript files to the browser 
+        "noEmitOnError": true,    // do not compile tsc if there is a error
+        "strictNullChecks": true,
+        "outDir": "./dist"
     }
 }
+
+/*
+{
+    "compilerOptions": {
+        "sourceMap": false,       // if true this addes the typescript files to the browser and 
+                                  //  we can debug in the browser e.g. console -> break points 
+        
+        "noEmitOnError": true,    // do not compile tsc if there is a error
+
+        "noImplicitAny": false,   // if true variables have to be set a type e.g. 
+                                  // let foo; would not compile, it has to be let foo: any; to compile
+        
+        "strictNullChecks": true,  // variables have to be initiziled to compile e.g. cannot be null
+        
+        "noUnusedParameters": false // tsc will check that there are no usedparameters and if so it will return an error
+    }
+}
+
+*/
